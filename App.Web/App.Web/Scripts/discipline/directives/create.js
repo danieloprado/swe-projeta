@@ -16,6 +16,9 @@
                     $modal.open({
                         templateUrl: "/discipline/create",
                         controller: "discipline.controllers.create"
+                    }).result.then(function (data) {
+                        console.log(data);
+                        scope.callback({ $value: data });
                     });
                 });
             }
