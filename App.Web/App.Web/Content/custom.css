@@ -1,0 +1,12 @@
+﻿.field-validation-error {
+    color: #af2726;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    float: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
