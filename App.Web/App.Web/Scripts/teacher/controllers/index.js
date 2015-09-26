@@ -2,14 +2,14 @@
     "use strict";
 
     angular.module("teacher")
-        .controller("teacher.controllers.index", ["$scope", controller]);
+        .controller("teacher.controllers.index", ["$scope", "$modal", "teacher.services.index", controller]);
 
 
-    function controller($scope) {
+    function controller($scope, $modal, service) {
+        $scope.topics = null;
 
-        $scope.$watch("form", function() {
-            console.log($scope.form);
-
-        });
+        $scope.disciplineCallback = function() {
+            console.log("discipline callback");
+        }
     }
 })(angular)

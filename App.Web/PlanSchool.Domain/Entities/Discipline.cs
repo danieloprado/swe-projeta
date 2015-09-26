@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PlanSchool.Domain.Entities
 {
-    public class User
+    public class Discipline
     {
-        private User()
+        private Discipline()
         {
             Id = Guid.NewGuid().ToString();
         }
@@ -17,14 +17,11 @@ namespace PlanSchool.Domain.Entities
 
         public string Name { get; set; }
 
-        public string Role { get; set; }
-
-        public static User Create(string name, string role)
+        public static Discipline Create(string name)
         {
-            return new User()
+            return new Discipline()
             {
-                Name = name,
-                Role = role
+                Name = name
             };
         }
     }

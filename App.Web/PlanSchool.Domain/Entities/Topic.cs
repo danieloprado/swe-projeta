@@ -11,13 +11,29 @@ namespace PlanSchool.Domain.Entities
         private Topic()
         {
             Id = Guid.NewGuid().ToString();
+            Lectures = new List<Lecture>();
         }
 
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
-        public static Topic Create()
+        public string DisciplineId { get; set; }
+
+        public string Description { get; set; }
+
+        public DateTime StartdaDateTime { get; set; }
+
+        public DateTime EnDateTime { get; set; }
+
+
+        public List<Lecture> Lectures { get; set; }
+
+        public static Topic Create(Discipline discipline, string description)
         {
-            return new Topic();
+            return new Topic()
+            {
+                DisciplineId = discipline.Id,
+                Description = description
+            };
         }
     }
 }

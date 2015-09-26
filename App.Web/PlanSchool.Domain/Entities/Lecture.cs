@@ -6,25 +6,22 @@ using System.Threading.Tasks;
 
 namespace PlanSchool.Domain.Entities
 {
-    public class User
+    public class Lecture
     {
-        private User()
+        private Lecture()
         {
             Id = Guid.NewGuid().ToString();
         }
 
         public string Id { get; set; }
 
-        public string Name { get; set; }
+        public string Description { get; set; }
 
-        public string Role { get; set; }
-
-        public static User Create(string name, string role)
+        public static Lecture Create(string description)
         {
-            return new User()
+            return new Lecture()
             {
-                Name = name,
-                Role = role
+                Description = description
             };
         }
     }

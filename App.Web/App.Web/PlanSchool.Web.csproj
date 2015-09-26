@@ -188,7 +188,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Discipline.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,11 +209,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\shared\controllers\home.js" />
     <Content Include="Scripts\shared\controllers\login.js" />
     <Content Include="Scripts\shared\directives\form.js" />
     <Content Include="Scripts\shared\module.js" />
+    <Content Include="Scripts\shared\service\login.js" />
     <Content Include="Scripts\teacher\module.js" />
     <Content Include="Scripts\teacher\controllers\index.js" />
+    <Content Include="Scripts\teacher\services\login.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,9 +261,16 @@
       <Project>{261c5bd1-7fec-4d0d-b62f-410a1da2cb2e}</Project>
       <Name>PlanSchool.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PlanSchool.Infra\PlanSchool.Infra.csproj">
+      <Project>{3c01e4de-268a-4464-bc05-cb2d1e4fcddf}</Project>
+      <Name>PlanSchool.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Template\Shared\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Template\Discipline\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
