@@ -1,5 +1,16 @@
-﻿<button discipline-create class="btn btn-success" >Criar Disciplina</button>
+﻿<button discipline-create callback="disciplineCallback($value)" class="btn btn-success">Criar Disciplina</button>
 
-<ol>
-    <li ng-repeat="topic in topics">{{topic}}</li>
-</ol>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tr ng-repeat="discipline in disciplines">
+        <td>{{discipline.Name}}</td>
+        <td>
+            
+        </td>
+    </tr>
+</table>

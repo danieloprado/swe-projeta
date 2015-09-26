@@ -7,6 +7,10 @@
 
     function service($http, toaster) {
 
+        this.list = function() {
+            return $http.get("/api/discipline/list");
+        }
+
         this.create = function (model) {
             return $http.post("/api/discipline/create", model)
                 .success(function (result) {

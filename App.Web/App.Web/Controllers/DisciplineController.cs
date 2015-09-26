@@ -21,6 +21,12 @@ namespace PlanSchool.Web.Controllers
             _repository = new DisciplineRepository();
         }
 
+        [HttpGet]
+        public async Task<List<Discipline>> List()
+        {
+            return await _repository.List();
+        }
+
         public async Task<TypedMethodFeedback<Discipline>> Create(DisciplineViewModel model)
         {
             if (!ModelState.IsValid)
