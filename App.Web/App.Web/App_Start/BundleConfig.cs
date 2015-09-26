@@ -1,13 +1,13 @@
 ﻿using System.Web.Optimization;
 
-namespace App.Web
+namespace PlanSchool.Web
 {
     public class BundleConfig
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/app")
-                .IncludeDirectory("~/Scripts", "*.js", true);
+                .IncludeDirectory("~/Scripts", "*.js", true));
 
             //BundleTable.EnableOptimizations = true;
         }

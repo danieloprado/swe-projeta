@@ -6,18 +6,17 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.ModelBinding;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using App.Web.Models;
-using App.Web.Providers;
-using App.Web.Results;
+using PlanSchool.Web.Models;
+using PlanSchool.Web.Providers;
+using PlanSchool.Web.Results;
 
-namespace App.Web.Controllers
+namespace PlanSchool.Web.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace App.Web
+namespace PlanSchool.Web
 {
     public class RouteConfig
     {

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace App.Web.Controllers
+namespace PlanSchool.Web.Controllers
 {
     public class TemplateController : Controller
     {

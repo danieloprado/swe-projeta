@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace App.Web.Models
+namespace PlanSchool.Web.Models
 {
     // Models returned by AccountController actions.
 

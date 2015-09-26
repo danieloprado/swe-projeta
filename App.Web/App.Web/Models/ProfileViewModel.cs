@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace App.Web.Models
+namespace PlanSchool.Web.Models
 {
     public class ProfileViewModel
     {
