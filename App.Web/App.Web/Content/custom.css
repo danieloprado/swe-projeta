@@ -10,3 +10,11 @@
     margin-bottom: 20px;
     width: 100%;
 }
+
+#toast-container {
+    top: 70px;
+}
+
+.login-form {
+    padding: 50px;
+}
