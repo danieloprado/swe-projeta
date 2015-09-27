@@ -1,16 +1,35 @@
-﻿<button discipline-create callback="disciplineCallback($value)" class="btn btn-success">Criar Disciplina</button>
+﻿
+<header class="bg-light lter b-b wrapper-md clearfix">
+    <h1 class="m-n font-thin h3">Static Table</h1>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tr ng-repeat="discipline in disciplines">
-        <td>{{discipline.Name}}</td>
-        <td>
-            
-        </td>
-    </tr>
-</table>
+    <button discipline-create
+            callback="disciplineCallback($value)"
+            class="btn btn-addon btn-success pull-right">
+        <i class="fa fa-plus"></i>
+        Criar Disciplina
+    </button>
+</header>
+
+<div class="wrapper-md">
+
+    <div class="panel">
+        <div class="">
+
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tr ng-repeat="discipline in disciplines">
+                    <td>{{discipline.Name}}</td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+</div>

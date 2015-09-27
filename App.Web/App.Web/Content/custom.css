@@ -18,3 +18,22 @@
 .login-form {
     padding: 50px;
 }
+
+.clearfix:before, .clearfix:after {
+    position: static;
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    position: static;
+    clear: both;
+}
+
+.panel {
+    border: 1px solid #ddd;
+}
+
+header h1 {
+    display: inline-block;
+}

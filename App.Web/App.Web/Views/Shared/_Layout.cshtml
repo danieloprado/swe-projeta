@@ -10,37 +10,78 @@
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" rel="stylesheet" />
 
+    <link href="~/Content/app.css" rel="stylesheet" />
     <link href="~/Content/custom.css" rel="stylesheet" />
 </head>
 <body>
 
-    <div class="navbar navbar-inverse" ng-if="isLogged()">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <section class="app app-header-fixed" id="app">
+   
+        <header class="app-header navbar">
+            <div class="navbar-header bg-black">
+                <button class="pull-right visible-xs dk" ng-click="showHeader = !showHeader">
+                    <i class="glyphicon glyphicon-cog"></i>
                 </button>
-                <a href="/" class="navbar-brand">Planeja</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li></li>
-                </ul>
+                <button class="pull-right visible-xs" ng-click="showMenu = !showMenu" ui-toggle-class="" data-target=".app-aside" ui-scroll="app">
+                    <i class="glyphicon glyphicon-align-justify"></i>
+                </button>
 
+                <a href="/" class="navbar-brand text-lt">
+                    <i class="fa fa-calendar-o"></i>
+                    <span class="hidden-folded m-l-xs ng-binding">PlaneJá</span>
+                </a>
+            </div>
+
+  
+            <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only" ng-class="{ show: showHeader }">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a ng-click="logout()">Sair</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle clear" data-toggle="dropdown">
+                            <span class="hidden-sm hidden-md">John.Smith</span> <b class="caret"></b>
+                        </a>
+
+                        <ul class="dropdown-menu animated fadeInRight w">
+                            <li><a ng-click="logout()">Sair</a></li>
+                        </ul>
+                    </li>
                 </ul>
+            </div>
+
+        </header>
+
+        <div class="app-aside hidden-xs bg-black" ng-class="{ 'off-screen': showMenu }">
+            <div class="aside-wrap">
+                <div class="navi-wrap">
+
+                    <nav ui-nav="" class="navi">
+                        <ul class="nav ng-scope">
+                            <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                                <span>Menu</span>
+                            </li>
+                            <li>
+                                <a href="/">
+                                    <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+                                    Home
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container body-content">
-        @RenderBody()
-    </div>
+        <div class="app-content">
+            <div class="hbox hbox-auto-xs hbox-auto-sm ng-cloak">
+                <div class="app-content-body">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </section>
 
     <toaster-container></toaster-container>
 
